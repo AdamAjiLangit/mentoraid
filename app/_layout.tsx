@@ -1,6 +1,8 @@
-import { Stack, SplashScreen } from "expo-router";
+import { Stack, SplashScreen, router } from "expo-router";
 import { useFonts } from "expo-font";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { View, Text } from "react-native";
+import Entypo from '@expo/vector-icons/Entypo';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -22,6 +24,9 @@ export default function RootLayout() {
 
     if (fontsLoaded) {
       SplashScreen.hideAsync();
+      setTimeout(() => {
+        router.replace('/landing');
+      }, 1500);
     }
   }, [fontsLoaded, error]);
 
@@ -34,9 +39,13 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-    </Stack>
+    <>
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+        <Stack.Screen name="(landing)" options={{ headerShown: false }} />
+        <Stack.Screen name="(homepage)" options={{ headerShown: false }} />
+      </Stack>
+    </>
   );
 }
