@@ -1,6 +1,5 @@
 import { Text, View, Button, Image, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
 import { Link, router } from "expo-router";
 import React, { useState } from "react";
 import CustomButton from "@/components/ui/CustomButton";
@@ -15,7 +14,7 @@ export default function Login() {
     });
 
     const submit = () => {
-        router.push("/register");
+        router.push("/homepage");
     }
 
     return (
@@ -42,20 +41,20 @@ export default function Login() {
                             title="Password"
                             value={form.password}
                             placeholder="Example123@"
-                            otherStyles="mb-1"
+                            otherStyles="mb-2"
                             handleChangeText={(e) => setForm({ ...form, password: e })}
                         />
                         <View className="items-end">
-                            <Link href="/" className="mb-normal text-lg text-primaryNormal">Lupa Password ?</Link>
+                            <Link href="/" className="mb-normal text-base text-primaryNormal font-pregular">Lupa Password ?</Link>
                         </View>
                         <CustomButton
-                            title="Login"
+                            title="Masuk"
                             handlePress={submit}
-                            containerStyles="bg-primaryNormal mb-1"
+                            containerStyles="bg-primaryNormal mb-2"
                         />
                         <View className="flex flex-row items-center justify-center">
-                            <Text className="text-lg text-secondNormal">Belum Punya Akun? </Text>
-                            <Link href="/register" className="text-lg text-primaryNormal">Daftar</Link>
+                            <Text className="text-base text-secondNormal font-pregular">Belum Punya Akun? </Text>
+                            <Link href="/register" className="text-base text-primaryNormal font-pregular">Daftar</Link>
                         </View>
                     </View>
                 </ScrollView>
