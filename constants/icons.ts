@@ -11,6 +11,11 @@ import logout from "../assets/icons/logout.png";
 import eyeHide from "../assets/icons/eye-hide.png";
 import eye from "../assets/icons/eye.png";
 import play from "../assets/icons/play.png";
+import calendar from "../assets/icons/calendar.png";
+import memo from "../assets/icons/memo.png";
+import article from "../assets/icons/article.png";
+import student from "../assets/icons/student.png";
+import book from "../assets/icons/book.png";
 
 export default {
     play,
@@ -26,4 +31,9 @@ export default {
     logout,
     eyeHide,
     eye,
+    calendar,
+    memo,
+    article,
+    student,
+    book
 };
