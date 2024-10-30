@@ -1,10 +1,13 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, Image, TouchableOpacity, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '@/constants';
+import { icons } from '@/constants';
 import { Link } from 'expo-router';
 import CustomButton from '@/components/ui/CustomButton';
+import CarouselComponent from '@/components/Homepage/Carousel';
+import BottomNavbar from '@/components/BottomNavbar/BottomNavbar';
 
 const Homepage = () => {
 
@@ -31,7 +34,7 @@ const Homepage = () => {
                         <Link href="/" className='text-base font-pregular text-primaryNormal underline'>Lihat Semua</Link>
                     </View>
                     {[...Array(2)].map((_, index) => (
-                        <TouchableOpacity key={index} className='bg-primaryNormal p-5 rounded-3xl mb-normal'>
+                        <View key={index} className='bg-primaryNormal p-5 rounded-3xl mb-normal'>
                             <View className='flex flex-row items-start justify-between mb-2'>
                                 <Text className='text-3xl font-pregular w-32 text-white'>Judul Meeting</Text>
                                 <View className='flex flex-row gap-x-[-20px]'>
@@ -65,10 +68,71 @@ const Homepage = () => {
                                     <Text className='text-base font-pregular text-white'>Selesai</Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
+                        </View>
                     ))}
                 </View>
+                <View className='w-full h-full bg-white rounded-t-3xl'>
+                    <View className='flex flex-row justify-between p-normal'>
+                        <TouchableOpacity className='flex flex-col gap-y-1 items-center'>
+                            <View className='p-1 bg-primaryLightActive rounded-full items-center justify-center'>
+                                <Image
+                                    source={icons.calendar}
+                                    className='w-12 h-12'
+                                    resizeMode='contain'
+                                />
+                            </View>
+                            <Text className='font-pmedium'>Kalender</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity className='flex flex-col gap-y-1 items-center'>
+                            <View className='p-1 bg-primaryLightActive rounded-full items-center justify-center mb-2'>
+                                <Image
+                                    source={icons.memo}
+                                    className='w-12 h-12'
+                                    resizeMode='contain'
+                                />
+                            </View>
+                            <View className='flex flex-col gap-y-[-6px] items-center'>
+                                <Text className='font-pmedium'>Daftar </Text>
+                                <Text className='font-pmedium'>Catatan</Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity className='flex flex-col gap-y-1 items-center'>
+                            <View className='p-2 bg-primaryLightActive rounded-full items-center justify-center'>
+                                <Image
+                                    source={icons.article}
+                                    className='w-10 h-10'
+                                    resizeMode='contain'
+                                />
+                            </View>
+                            <Text className='font-pmedium'>Artikel</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity className='flex flex-col gap-y-1 items-center'>
+                            <View className='p-1 bg-primaryLightActive rounded-full items-center justify-center'>
+                                <Image
+                                    source={icons.student}
+                                    className='w-12 h-12'
+                                    resizeMode='contain'
+                                />
+                            </View>
+                            <Text className='font-pmedium'>List Murid</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View className='flex flex-row gap-x-1 items-center mb-5 px-normal'>
+                        <Image
+                            source={icons.book}
+                            className='w-7 h-7'
+                            resizeMode='contain'
+                        />
+                        <Text className='font-pmedium text-lg'>Rekomendasi E-book</Text>
+                    </View>
+                    <View className='mb-28'>
+                        <CarouselComponent />
+                    </View>
+                </View>
             </ScrollView>
+            <View className="absolute bottom-0 left-0 right-0">
+                <BottomNavbar />
+            </View>
         </SafeAreaView>
     )
 }

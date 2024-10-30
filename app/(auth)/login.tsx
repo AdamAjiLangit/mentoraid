@@ -45,7 +45,7 @@ export default function Login() {
                             handleChangeText={(e) => setForm({ ...form, password: e })}
                         />
                         <View className="items-end">
-                            <Link href="/" className="mb-normal text-base text-primaryNormal font-pregular">Lupa Password ?</Link>
+                            <Link href="/forgot-password" className="mb-normal text-base text-primaryNormal font-pregular">Lupa Password ?</Link>
                         </View>
                         <CustomButton
                             title="Masuk"

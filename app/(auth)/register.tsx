@@ -33,9 +33,9 @@ export default function Register() {
                         <Text className="font-pregular text-2xl mb-normal">Daftar</Text>
                         <FormField
                             title="Nama Lengkap"
-                            value={form.email}
+                            value={form.fullName}
                             placeholder="nama lengkap"
-                            handleChangeText={(e) => setForm({ ...form, email: e })}
+                            handleChangeText={(e) => setForm({ ...form, fullName: e })}
                             otherStyles="mb-normal"
                         />
                         <FormField
