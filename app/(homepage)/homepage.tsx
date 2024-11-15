@@ -8,13 +8,14 @@ import { Link } from 'expo-router';
 import CustomButton from '@/components/ui/CustomButton';
 import CarouselComponent from '@/components/Homepage/Carousel';
 import BottomNavbar from '@/components/BottomNavbar/BottomNavbar';
+import EbookCarousel from '@/components/Homepage/Ebookcarousel';
 
 const Homepage = () => {
 
     return (
         <SafeAreaView className='bg-primaryLight h-full'>
             <ScrollView>
-                <View className='m-normal'>
+                <View className='m-3'>
                     <View className='flex flex-row justify-between items-center mb-normal'>
                         <View className='flex flex-row gap-4 items-center justify-center'>
                             <View className='w-fit h-fit shadow-md shadow-netralDark rounded-full'>
@@ -29,14 +30,50 @@ const Homepage = () => {
                             <Icon name="notifications-none" size={35} color="#fff" />
                         </View>
                     </View>
-                    <View className='flex flex-row justify-between items-end mb-normal'>
-                        <Text className='text-xl font-pregular'>Daftar Antrean</Text>
+                    <View className='bg-[#FF5A5AD9] p-5 rounded-xl mb-normal'>
+                        <View className='flex flex-row items-start justify-between mb-2'>
+                            <Text className='text-xl font-pregular w-32 text-white'>Judul Meeting</Text>
+                            <View className='flex flex-row gap-x-[-20px]'>
+                                <View className='w-fit h-fit shadow-2xl shadow-black rounded-full'>
+                                    <Image
+                                        source={images.pfp}
+                                        className='w-[40px] h-[40px] rounded-full'
+                                    />
+                                </View>
+                                <View className='w-fit h-fit shadow-2xl rounded-full'>
+                                    <Image
+                                        source={images.pfp2}
+                                        className='w-[40px] h-[40px] rounded-full'
+                                    />
+                                </View>
+                            </View>
+                        </View>
+                        <View className='flex flex-row justify-between items-center'>
+                            <View className='flex flex-col gap-y-1'>
+                                <Text className='text-2xl font-semibold text-white'>12:00</Text>
+                                <Text className='text-base font-pregular text-white'>Mulai</Text>
+                            </View>
+                            <CustomButton
+                                title='Sedang Berlangsung'
+                                handlePress={() => { }}
+                                containerStyles='bg-red-900 px-3 rounded-full min-h-[40px] min-w-[50]'
+                                textStyles='font-bold text-xs'
+                            />
+                            <View className='flex flex-col gap-y-1 text-start'>
+                                <Text className='text-2xl font-semibold text-white '>13:00</Text>
+                                <Text className='text-base font-pregular text-white'>Selesai</Text>
+                            </View>
+                        </View>
+                    </View>
+                    <View className='flex flex-row justify-between items-end'>
+                        <Text className='text-lg font-pregular'>Daftar Antrean</Text>
                         <Link href="/" className='text-base font-pregular text-primaryNormal underline'>Lihat Semua</Link>
                     </View>
+                    <View className='py-1'></View>
                     {[...Array(2)].map((_, index) => (
-                        <View key={index} className='bg-primaryNormal p-5 rounded-3xl mb-normal'>
+                        <View key={index} className='bg-white p-5 rounded-xl mb-normal'>
                             <View className='flex flex-row items-start justify-between mb-2'>
-                                <Text className='text-3xl font-pregular w-32 text-white'>Judul Meeting</Text>
+                                <Text className='text-xl font-pregular w-32 text-black'>Judul Meeting</Text>
                                 <View className='flex flex-row gap-x-[-20px]'>
                                     <View className='w-fit h-fit shadow-2xl shadow-black rounded-full'>
                                         <Image
@@ -54,18 +91,18 @@ const Homepage = () => {
                             </View>
                             <View className='flex flex-row justify-between items-center'>
                                 <View className='flex flex-col gap-y-1'>
-                                    <Text className='text-2xl font-pregular text-white'>12:00</Text>
-                                    <Text className='text-base font-pregular text-white'>Mulai</Text>
+                                    <Text className='text-2xl font-pregular text-black'>12 : 00</Text>
+                                    <Text className='text-base font-pregular text-black'>Mulai</Text>
                                 </View>
                                 <CustomButton
                                     title='1 Jam'
                                     handlePress={() => { }}
-                                    containerStyles='bg-secondDark px-7 rounded-full min-h-[50px]'
+                                    containerStyles='bg-blue-900 px-7 rounded-full min-h-[40px] min-w-[50]'
                                     textStyles='font-pregular text-base'
                                 />
                                 <View className='flex flex-col gap-y-1 text-start'>
-                                    <Text className='text-2xl font-pregular text-white'>13:00</Text>
-                                    <Text className='text-base font-pregular text-white'>Selesai</Text>
+                                    <Text className='text-2xl font-pregular text-black'>13 : 00</Text>
+                                    <Text className='text-base font-pregular text-black'>Selesai</Text>
                                 </View>
                             </View>
                         </View>
@@ -92,7 +129,7 @@ const Homepage = () => {
                                 />
                             </View>
                             <View className='flex flex-col gap-y-[-6px] items-center'>
-                                <Text className='font-pmedium'>Daftar </Text>
+                                {/* <Text className='font-pmedium'>Daftar </Text> */}
                                 <Text className='font-pmedium'>Catatan</Text>
                             </View>
                         </TouchableOpacity>
@@ -114,7 +151,7 @@ const Homepage = () => {
                                     resizeMode='contain'
                                 />
                             </View>
-                            <Text className='font-pmedium'>List Murid</Text>
+                            <Text className='font-pmedium'>Data Siswa</Text>
                         </TouchableOpacity>
                     </View>
                     <View className='flex flex-row gap-x-1 items-center mb-5 px-normal'>
@@ -124,6 +161,9 @@ const Homepage = () => {
                             resizeMode='contain'
                         />
                         <Text className='font-pmedium text-lg'>Rekomendasi E-book</Text>
+                    </View>
+                    <View className='flex flex-row gap-x-1 mb-10 mr-5 px-normal justify-center'>
+                        <EbookCarousel />
                     </View>
                     <View className='mb-28'>
                         <CarouselComponent />

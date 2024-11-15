@@ -33,10 +33,10 @@ const ForgotPassword = () => {
                 >
                     <Icon name="arrow-back" size={24} color="#fff" />
                 </TouchableOpacity>
-                <Text className='text-2xl font-pmedium mb-3'>Forgot Password</Text>
-                <Text className='text-[#989898] text-base font-pregular mb-normal'>Please enter your email to reset the password</Text>
+                <Text className='text-2xl font-pmedium mb-3'>Lupa Kata sandi</Text>
+                <Text className='text-[#989898] text-base font-pregular mb-normal'>Mohon masukkan email anda, untuk reset ulang kata sandi</Text>
                 <FormField
-                    title='Your Email'
+                    title='Email'
                     placeholder='example@'
                     handleChangeText={() => { }}
                     otherStyles='mb-5'

@@ -27,9 +27,9 @@ const CheckEmail = () => {
                 >
                     <Icon name="arrow-back" size={24} color="#fff" />
                 </TouchableOpacity>
-                <Text className='text-2xl font-pmedium mb-3'>Check your email</Text>
-                <Text className='text-[#989898] text-base mb-normal font-pregular'>We sent a reset link to <Link href="mailto:adam@gmail.com" className='text-black font-pmedium'>contact@dscode...com </Link>
-                    enter 5 digit code that mentioned in the email</Text>
+                <Text className='text-2xl font-pmedium mb-3'>Cek Email Kamu</Text>
+                <Text className='text-[#989898] text-base mb-normal font-pregular'>Kami telah mengirimkan email ke <Link href="mailto:adam@gmail.com" className='text-black font-pmedium'>contact@dscode...com </Link>
+                masukkan 5 kode yang telah dikirimkan di dalam email.</Text>
                 <OtpInput
                     numberOfDigits={5}
                     focusColor="#5a5dff"
@@ -52,9 +52,9 @@ const CheckEmail = () => {
                     />
                 </View>
                 <View className='flex flex-row justify-center items-center w-full'>
-                    <Text className='text-[#989898] text-base font-pregular'>Haven't got the email yet?</Text>
+                    <Text className='text-[#989898] text-base font-pregular'>Belum menerima email?</Text>
                     <TouchableOpacity>
-                        <Text className='text-base font-pregular text-blue-500 underline'> Resend email</Text>
+                        <Text className='text-base font-pregular text-blue-500 underline'> Kirim ulang</Text>
                     </TouchableOpacity>
                 </View>
             </View>

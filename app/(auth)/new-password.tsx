@@ -26,26 +26,26 @@ const NewPassword = () => {
                 >
                     <Icon name="arrow-back" size={24} color="#fff" />
                 </TouchableOpacity>
-                <Text className='text-2xl font-pmedium mb-3'>Set a new password</Text>
-                <Text className='text-[#989898] text-base font-pregular mb-normal'>Create a new password. Ensure it differs from
-                    previous ones for security</Text>
+                <Text className='text-2xl font-pmedium mb-3'>Atur kata sandi baru</Text>
+                <Text className='text-[#989898] text-base font-pregular mb-normal'>
+                Buat kata sandi baru. Pastikan berbeda dari yang sebelumnya untuk keamanan.</Text>
                 <FormField
-                    title='Password'
-                    placeholder='Enter your new password'
+                    title='Kata Sandi'
+                    placeholder='Masukkan kata sandi baru'
                     handleChangeText={() => { }}
                     otherStyles='mb-5'
                     value=''
                 />
                 <FormField
-                    title='Confirm Password'
-                    placeholder='Re-enter password'
+                    title='Konfirmasi Kata Sandi'
+                    placeholder='Masukkan ulang kata sandi baru'
                     handleChangeText={() => { }}
                     otherStyles='mb-5'
                     value=''
                 />
                 <View className='w-full'>
                     <CustomButton
-                        title='Update Password'
+                        title='Simpan'
                         handlePress={() => { handleNextSlide() }}
                         containerStyles='bg-primaryNormal'
                     />
