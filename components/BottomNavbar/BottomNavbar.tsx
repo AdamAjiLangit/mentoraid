@@ -37,8 +37,8 @@ const BottomNavbar = () => {
 
             {/* Pengaturan */}
             <TouchableOpacity className="flex-1 items-center">
-                <Icon5 name="setting" size={24} color="#9DB2CE" />
-                <Text className="text-xs text-[#9DB2CE] font-pregular">Setting</Text>
+                <Icon5 name="user" size={24} color="#9DB2CE" />
+                <Text className="text-xs text-[#9DB2CE] font-pregular">Profil</Text>
             </TouchableOpacity>
         </View>
     );

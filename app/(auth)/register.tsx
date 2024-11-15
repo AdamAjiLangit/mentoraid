@@ -61,8 +61,8 @@ export default function Register() {
                             containerStyles="bg-primaryNormal mb-2"
                         />
                         <View className="flex flex-row items-center justify-center">
-                            <Text className="text-lg text-secondNormal font-pregular">Sudah Punya Akun? </Text>
-                            <Link href="/login" className="text-lg text-primaryNormal font-pregular">Masuk</Link>
+                            <Text className="text-base text-secondNormal font-pregular">Sudah Punya Akun? </Text>
+                            <Link href="/login" className="text-base text-primaryNormal font-pregular">Masuk</Link>
                         </View>
                     </View>
                 </ScrollView>

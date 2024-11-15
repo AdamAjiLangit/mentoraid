@@ -19,19 +19,19 @@ const landingData: LandingData[] = [
     {
         id: 1,
         title: 'Selamat Datang di MENTORAID',
-        description: 'Selamat Datang di MENTORAID dimana kau bisa mengeksplore dunia mentoring',
+        description: 'Selamat Datang di MENTORAID dimana kamu bisa mengeksplore dunia mentoring',
         image: images.landing1,
     },
     {
         id: 2,
         title: 'Bimbingan Mudah Dengan Murid',
-        description: 'Anda bisa membuat jadwal bimbingan dengan murid dengan mudah',
+        description: 'Anda bisa membuat jadwal bimbingan dengan siswa dengan mudah',
         image: images.landing2,
     },
     {
         id: 3,
         title: 'Buat Catatan',
-        description: 'Kirim catatan untuk diberikan kepada murid dengan mudah dimanapun dan kapanpun',
+        description: 'Kirim catatan untuk dibagikan ke siswa dengan mudah dimanapun dan kapanpun',
         image: images.landing3,
     },
 ];
@@ -64,6 +64,7 @@ const LandingPage: React.FC = () => {
 
     return (
         <View className="flex-1 bg-white">
+            <View className="py-2"/>
             <View className='w-full items-center'>
                 <Text className="text-2xl font-bold mt-5">MENTORAID</Text>
             </View>
@@ -88,7 +89,7 @@ const LandingPage: React.FC = () => {
 
             {currentIndex > 0 && (
                 <TouchableOpacity
-                    className="absolute bottom-12 left-8 bg-primaryNormal p-3 rounded-full"
+                    className="absolute bottom-12 left-8 bg-primaryNormal p-3 rounded-xl"
                     onPress={handlePrevSlide}
                 >
                     <Icon name="arrow-back" size={24} color="#fff" />
@@ -97,14 +98,14 @@ const LandingPage: React.FC = () => {
 
             {currentIndex < landingData.length - 1 ? (
                 <TouchableOpacity
-                    className="absolute bottom-12 right-8 bg-primaryNormal p-3 rounded-full"
+                    className="absolute bottom-12 right-8 bg-primaryNormal p-3 rounded-xl"
                     onPress={handleNextSlide}
                 >
                     <Icon name="arrow-forward" size={24} color="#fff" />
                 </TouchableOpacity>
             ) : (
                 <TouchableOpacity
-                    className="absolute bottom-12 right-8 bg-primaryNormal p-3 rounded-full"
+                    className="absolute bottom-12 right-8 bg-primaryNormal p-3 rounded-xl  "
                     onPress={handleNavigate}
                 >
                     <Icon name="arrow-forward" size={24} color="#fff" />
@@ -119,7 +120,7 @@ export default LandingPage;
 const styles = StyleSheet.create({
     pagination: {
         position: 'absolute',
-        bottom: 270,
+        bottom: 340,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',

@@ -27,12 +27,11 @@ const VerifySuccess = () => {
                 >
                     <Icon name="arrow-back" size={24} color="#fff" />
                 </TouchableOpacity>
-                <Text className='text-2xl font-pmedium mb-3'>Password Reset</Text>
-                <Text className='text-[#989898] text-base mb-normal font-pregular'>Your password has been successfully reset. click
-                    confirm to set a new password</Text>
+                <Text className='text-2xl font-pmedium mb-3'>Reset Kata Sandi</Text>
+                <Text className='text-[#989898] text-base mb-normal font-pregular'>Kata sandi Anda telah berhasil direset. Klik konfirmasi untuk mengatur kata sandi baru.</Text>
                 <View className='w-full'>
                     <CustomButton
-                        title='Confirm'
+                        title='Konfirmasi'
                         handlePress={() => {handleNextSlide()}}
                         containerStyles='bg-primaryNormal mb-5'
                     />
